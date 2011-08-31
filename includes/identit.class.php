@@ -35,17 +35,17 @@ class identIT {
 			$i = 0;
 			$tmpTab = null;
 			
-			// Cierre de if
+			// Closed if?
 			$opened-= (preg_match('/^}$/', $line)) ? 1 : 0;
 			
-			// Un else
+			// Else here?
 			$opened-= (preg_match('/^}else{$/', $line)) ? 1 : 0;
 			
-			// Poner los tab correspondientes
+			// Put corresponding tabs
 			for($i = 0; $i<$opened; $i++)
 				$tmpTab .= '	';
 			
-			// Si es un IF, termino de Else, While, For o Foreach
+			/// If it is if, else end, while, for or foreach
 			$opened+=(preg_match('/^if.*{/', $line) || preg_match('/^}else{/', $line) || preg_match('/^while.*{/', $line) ||
 			preg_match('/^for.*{/', $line) || preg_match('/^foreach.*{/', $line)) ? 1 : 0;
 			
