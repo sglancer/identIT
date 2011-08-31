@@ -19,6 +19,7 @@ Example:
 	?>
 
 With this class, the code generated will be:
+-----------
 	<?php
 	if ($foo == $bar) {
 		echo "Foo its equal to bar<br />";
