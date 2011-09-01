@@ -34,6 +34,8 @@ class identIT {
 		foreach ($lines as $line) {
 			$i = 0;
 			$tmpTab = null;
+			// Delete possible tabs
+			$line = trim($line);
 			
 			// Closed if?
 			$opened-= (preg_match('/^}$/', $line)) ? 1 : 0;
